@@ -1,0 +1,113 @@
+@charset "UTF-8";
+
+.background-clip(@clipping) {
+	background-clip: @clipping;
+	-moz-background-clip: @clipping;
+	-webkit-background-clip: @clipping;
+}
+
+.bw-gradient(@color: #F5F5F5, @start: 0, @stop: 255) {
+	 background: @color;
+	 background: -webkit-gradient(linear, left top, left bottom, color-stop(0, rgb(@start, @start, @start)), color-stop(1, rgb(@stop, @stop, @stop)));
+	 background: -moz-linear-gradient(center top, rgb(@start, @start, @start) 0%, rgb(@stop, @stop, @stop) 100%);
+}
+
+.bordered(@top-bordered, @right-bordered, @bottom-bordered, @left-bordered) {
+	 border-top: @top-bordered;
+	 border-left: @left-bordered;
+	 border-right: @right-bordered;
+	 border-bottom: @bottom-bordered;
+}
+
+.border-color(@top-color: #EEE, @right-color: #EEE, @bottom-color: #EEE, @left-color: #EEE) {
+	 border-top-color: @top-color;
+	 border-left-color: @left-color;
+	 border-right-color: @right-color;
+	 border-bottom-color: @bottom-color;
+}
+
+.border-radius(@topleft: 0, @topright: 0, @bottomright: 0, @bottomleft: 0) {
+	 -webkit-border-top-right-radius: @topright;
+	 -webkit-border-bottom-right-radius: @bottomright;
+	 -webkit-border-bottom-left-radius: @bottomleft;
+	 -webkit-border-top-left-radius: @topleft;
+	 -moz-border-radius-topright: @topright;
+	 -moz-border-radius-bottomright: @bottomright;
+	 -moz-border-radius-bottomleft: @bottomleft;
+	 -moz-border-radius-topleft: @topleft;
+	 border-top-right-radius: @topright;
+	 border-bottom-right-radius: @bottomright;
+	 border-bottom-left-radius: @bottomleft;
+	 border-top-left-radius: @topleft;
+}
+
+.box-shadow(@bs-arguments) {
+	 -webkit-box-shadow: @bs-arguments;
+	 -moz-box-shadow: @bs-arguments;
+	 box-shadow: @bs-arguments;
+}
+
+.box-sizing(@box-sizing) {
+	-moz-box-sizing: @box-sizing;
+	-webkit-box-sizing: @box-sizing;	
+	box-sizing: @box-sizing;
+}
+
+.gradient (@color: #F5F5F5, @startcolor: #FFFFFF, @endcolor: #EDEDED) {
+	background: @color;
+	background: -webkit-gradient(linear, left top, left top, from(@startcolor), to(@endcolor));
+	background: -moz-linear-gradient(top,  @startcolor,  @endcolor);
+	background: -webkit-linear-gradient(top, @startcolor 0%,@endcolor 100%);
+	background: -o-linear-gradient(top, @startcolor 0%,@endcolor 100%);
+	background: -ms-linear-gradient(top, @startcolor 0%,@endcolor 100%);
+	filter: e(%("progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=%d,endColorstr=%d)", @startcolor, @endcolor));
+	-ms-filter: %("progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=%d,endColorstr=%d)", @startcolor, @endcolor);
+	background: linear-gradient(top, @startcolor 0%,@endcolor 100%);
+}
+
+.gradient-image (@url, @color: #F5F5F5, @startcolor: #FFFFFF, @endcolor: #EDEDED) {
+	background: @url, @color;
+	background: @url, -webkit-gradient(linear, left top, left top, from(@startcolor), to(@endcolor));
+	background: @url, -moz-linear-gradient(top,  @startcolor,  @endcolor);
+	background: @url, -webkit-linear-gradient(top, @startcolor 0%,@endcolor 100%);
+	background: @url, -o-linear-gradient(top, @startcolor 0%,@endcolor 100%);
+	background: @url, -ms-linear-gradient(top, @startcolor 0%,@endcolor 100%);
+	filter: e(%("progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=%d,endColorstr=%d)", @startcolor, @endcolor));
+	-ms-filter: %("progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=%d,endColorstr=%d)", @startcolor, @endcolor);
+	background: @url, linear-gradient(top, @startcolor 0%,@endcolor 100%);
+}
+
+.opacity(@opacity: 0.5) {
+	 -moz-opacity: @opacity;
+	 -khtml-opacity: @opacity;
+	 -webkit-opacity: @opacity;
+	 opacity: @opacity;
+}
+
+.scale(@ratio:1.5) {
+	 -webkit-transform:scale(@ratio);
+	 -moz-transform:scale(@ratio);
+	 transform:scale(@ratio);
+}
+
+.text-shadow(@text-shadow) {
+	text-shadow: @text-shadow;
+}
+
+.transform(@properties) {
+	 -webkit-transform: @properties;
+	 -moz-transform: @properties;
+	 transform: @properties;
+}
+
+.transition(@properties) {
+	 -webkit-transition: @properties;
+	 -moz-transition: @properties;
+	 transition: @properties;
+}
+
+.bleed {
+	background-clip: border-box;
+	-moz-background-clip: border;
+	-webkit-background-clip: border-box;
+}

@@ -1,7 +1,7 @@
 body {
 	font-size: 10px;
 	background-color: #333;
-	font-family: Arial;
+	font-family: "Lucida Grande", "Lucida Sans Unicode", Geneva, sans-serif;
 	background-image: url('img/bg.png');
 	background-size: 100% 100%;
 }
@@ -49,6 +49,13 @@ body {
 		border-bottom: 1px #666 solid;
 		.first-row, .second-row {
 			height: 27px;
+			.title {
+				line-height: 25px;
+				font-size: 12px;
+				text-align: center;
+				color: #333;
+				text-shadow: 0 1px 0 rgba(255,255,255,0.4)
+			}
 		}
 		.second-row {
 			padding: 0 10px;
@@ -166,13 +173,14 @@ body {
 		bottom: 0;
 		background-color: #e0e4ea;
 		border-right: 1px #9ca6af solid;
-		padding: 10px;
+		padding: 0 10px 10px;
 		h2 {
-			font-size: 11px;
-			color: #707e8b;
+			font-size: 12px;
+			color: #707E8B;
 			text-shadow: 0 1px 0 rgba(255,255,255,0.5);
 			font-weight: bold;
 			line-height: 20px;
+			padding: 10px 0 0;
 		}
 		li {
 			font-size: 11px;
